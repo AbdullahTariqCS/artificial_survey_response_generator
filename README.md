@@ -1,2 +1,2 @@
-# survey_response_generator
-Generates random options for a particular amount of questions, but the options are normally distributed, making the data look real.
+#Survey Response Generator
+Can be used to generate realistic responses to surveys with a p-value of greater than 0.05 in softwares like SPSS. However only works with Mutliple Choice Questions
