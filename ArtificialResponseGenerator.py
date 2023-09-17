@@ -57,55 +57,57 @@ def fileGenerator():
             
     
 
+def main():
+    for Q in range (0, numQ):
+        print(f'Q{Q+1})-')
+        for pRange in range (0, 100):
         
-for Q in range (0, numQ):
-    print(f'Q{Q+1})-')
-    for pRange in range (0, 100):
+            print(f'{pRange+1})-', end = '')
+            
     
-        print(f'{pRange+1})-', end = '')
-        
-
-        frequency = randint(1,100)
-        
-        
-        middle = randint(50,60)
-        middleSide = randint(20,int((100-middle)/2))
-        Side = int((100-middle-2*middleSide)/2)
-        
-        
-        # print(f'Frequency: {frequency}')
-        if frequency < 50:
-            normalGenerator(
-                            Side + randint(0,3),
-                            middleSide + randint(-3,3),
-                            middle,
-                            middleSide + randint(-3,3),
-                            Side  + randint(6,9),
-                            Q, pRange)
-        elif frequency >= 50 and frequency < 75:
-            normalGenerator(
-                            Side + randint(0,3),
-                            middle,
-                            middleSide + randint(-3,3),
-                            middleSide + randint(-3,3),
-                            Side  + randint(6,9),
-                            # randint(5,10),
-                            Q, pRange)
-        elif frequency >= 75 and frequency < 100:
-            normalGenerator( 
-                            Side + randint(0,2),
-                            middleSide + randint(-3,3),
-                            middleSide + randint(-3,3),
-                            middle,
-                            Side  + randint(6,9),
-                            # randint(5,10),
-                            Q, pRange)
-        
-      
-    print('\n')
+            frequency = randint(1,100)
+            
+            
+            middle = randint(50,60)
+            middleSide = randint(20,int((100-middle)/2))
+            Side = int((100-middle-2*middleSide)/2)
+            
+            
+            # print(f'Frequency: {frequency}')
+            if frequency < 50:
+                normalGenerator(
+                                Side + randint(0,3),
+                                middleSide + randint(-3,3),
+                                middle,
+                                middleSide + randint(-3,3),
+                                Side  + randint(6,9),
+                                Q, pRange)
+            elif frequency >= 50 and frequency < 75:
+                normalGenerator(
+                                Side + randint(0,3),
+                                middle,
+                                middleSide + randint(-3,3),
+                                middleSide + randint(-3,3),
+                                Side  + randint(6,9),
+                                # randint(5,10),
+                                Q, pRange)
+            elif frequency >= 75 and frequency < 100:
+                normalGenerator( 
+                                Side + randint(0,2),
+                                middleSide + randint(-3,3),
+                                middleSide + randint(-3,3),
+                                middle,
+                                Side  + randint(6,9),
+                                # randint(5,10),
+                                Q, pRange)
+            
+          
+        print('\n')
     
 
-fileGenerator()
+if __name__ == '__main__':
+    main()
+    fileGenerator()
             
         
                     
